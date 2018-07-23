@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./JS/script.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="./logo/devis-chambre-froide-frigoriste.png" />
+    <title>Facturation</title>
+</head>
+<body>
+
+    <div class="desgnfact">
+      <div class="saisie">
+    <form >
+    <h3>Produit</h3>
+    <input type="text" name="item" title="Norme Respecter" id="item" pattern="[A-Za-z] {3}" autocomplete='off'>
+    <h3>Quantité</h3>
+    <input type="text" name="quantity" id="quantity" autocomplete='off'>
+    <h3>Prix Unitaire</h3> 
+    <input type="text" name="price" id="price" autocomplete='off'>
+    <h3>TVA %</h3>
+    <input type="text" name="price" id="TVA" autocomplete='off'>
+  <br>
+  <br>
+  <br>
+    <input type="button" value="Ajouter Du Produit" onClick="addRow(); prixht(); prixtva(); vider()" id="add" class="ajtproduit">
+  </form>
+<br>
+  <button onclick="exportTableToCSV('members.csv')"  class="ajtproduit">Fichier CSV</button>
+    <br>
+    <br>
+    <form>
+      <input id="impression" name="impression" class="ajtproduit" type="button" onclick="imprimfact()" value="Imprimer Facture" />
+    </form>
+</div>
+    <br />
+    <br />
+    <div id="print">
+       
+      <h2>Ste Elyes Distribution</h2>
+      <p><strong>Adresse :</strong> 23 Rue Liberté Tunis Résidense LesJasmins</p>
+      <p><strong>Tel :</strong> 99 999 999</p>
+        <table id="table" border="1" class="draggable">
+          <thead id="table-head">
+           
+            <tr>
+            
+              <th>Produit</th>
+              <th>Quantité</th>
+              <th>Prix Unitaire</th>
+              <th>Prix H.TVA</th>
+              <th>% TVA</th>
+              <th>Prix TTC</th>
+              
+      
+            </tr>
+      
+            
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+         <h3 id="prixhtva"></h3>
+      
+         <h3 id="prixhtva1"></h3>
+        </div>
+  </div>
+  
+    
+     <br>
+    
+ 
+  </body>
+</html>
