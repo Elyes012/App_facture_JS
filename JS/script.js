@@ -624,7 +624,7 @@ function prixht() {
  var somme = 0;
  for (var i = 1; i < table.rows.length; i++)
  {
-  somme = somme + parseFloat(table.rows[i].cells[3].innerHTML);
+  somme = somme + parseFloat(Number(table.rows[i].cells[3].innerHTML).toFixed(2));
  }
  
  console.log(somme)
@@ -638,8 +638,8 @@ function prixtva() {
  var tt = 0;
  for (var i = 1; i < table.rows.length; i++)
  {
-  parseFloat(Number(931.175).toFixed(2));
-  tt = tt + parseFloat(table.rows[i].cells[5].innerHTML);
+
+  tt = tt + parseFloat(Number(table.rows[i].cells[5].innerHTML).toFixed(2));
  
  }
  
